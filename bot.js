@@ -40,16 +40,16 @@ client.on('message', msg => {
         //John
         if(msg.author.username === "John"){
             getFolderSize('John').then(function(response){
-                var exChris = response;
+                var exHarold = response;
                 msg.reply(captionPhrase[randomNum(captionPhrase)], {files: ["./captionJohn/" + Math.floor(Math.random() * exJohn) + ".jpg" ]})
                 })
         }
 
         //Bob
-        if(msg.author.username === "Bob"){
-            getFolderSize('Bob').then(function(response){
-                var exKian = response;
-                msg.reply(captionPhrase[randomNum(captionPhrase)], {files:["./captionBob/" + Math.floor(Math.random() * exBob) + ".jpg" ]})
+        if(msg.author.username === "Harold"){
+            getFolderSize('Harold').then(function(response){
+                var exHarold = response;
+                msg.reply(captionPhrase[randomNum(captionPhrase)], {files:["./captionHarold/" + Math.floor(Math.random() * exHarold) + ".jpg" ]})
             })
         }
         console.log(msg.author.username + " got captioned");
